@@ -104,10 +104,10 @@ export function Navbar() {
             ))}
           </ul>
 
-          <div className="mt-4 border-t border-gray-100 pt-4">
+          <div className="mt-4 border-t border-gray-100 pt-4 flex justify-center">
             <Button
               asChild
-              className="w-full justify-center h-10 bg-orange-600 text-white hover:bg-orange-700"
+              className="w-full max-w-sm rounded-none justify-center h-10 bg-orange-600 text-white hover:bg-orange-700"
             >
               <Link
                 href="#contact"
