@@ -20,19 +20,17 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-gray-200/80 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80">
-      <nav className="flex items-center justify-between gap-4 px-5 py-4 sm:px-8 md:px-10 lg:px-12">
+      <nav className="flex items-center justify-between gap-4 px-5 py-4 sm:px-8 md:px-10  lg:px-16  xl:px-24 2xl:px-40">
         {/* Left: Logo */}
         <Link
           href="#home"
           className="flex shrink-0 items-center gap-2 text-gray-900 rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2"
           aria-label="DigitalPro home"
         >
-          <span className="flex h-9 w-9 items-center justify-center rounded bg-orange-600 text-lg font-bold text-white">
+          <span className="flex h-11 w-11 items-center justify-center rounded-none bg-orange-600 text-xl font-bold text-white">
             D
           </span>
-          <span className="text-xl font-semibold tracking-tight">
-            DigitalPro
-          </span>
+          <span className="text-2xl font-bold tracking-tight">DigitalPro</span>
         </Link>
 
         {/* Center: Links (Desktop only ≥1024px) */}
@@ -54,7 +52,7 @@ export function Navbar() {
           <Button
             asChild
             className={cn(
-              "hidden lg:inline-flex h-9 rounded-md bg-orange-600 px-4 text-white",
+              "hidden lg:inline-flex h-11 bg-orange-600 px-4 text-white rounded-none",
               "hover:bg-orange-700 focus-visible:ring-orange-500",
             )}
           >
@@ -75,9 +73,9 @@ export function Navbar() {
             aria-controls="mobile-menu"
           >
             {mobileMenuOpen ? (
-              <X className="size-5" />
+              <X className="size-6" />
             ) : (
-              <Menu className="size-5" />
+              <Menu className="size-6" />
             )}
           </Button>
         </div>
@@ -109,7 +107,7 @@ export function Navbar() {
           <div className="mt-4 border-t border-gray-100 pt-4">
             <Button
               asChild
-              className="w-full justify-center h-10 rounded-md bg-orange-600 text-white hover:bg-orange-700"
+              className="w-full justify-center h-10 bg-orange-600 text-white hover:bg-orange-700"
             >
               <Link
                 href="#contact"
