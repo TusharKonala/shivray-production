@@ -5,8 +5,8 @@ import { cn } from "@/lib/utils";
 
 export function Hero() {
   return (
-    <section className="border-b border-gray-200/80 bg-white" aria-label="Hero">
-      <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section className="border-gray-200/80 bg-white" aria-label="Hero">
+      <div className="border-b mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 items-center gap-6 sm:gap-8 lg:grid-cols-2 lg:gap-12 xl:gap-16 py-6 lg:py-8">
           {/* Column 1: Content */}
           <div className="flex flex-col justify-center gap-6 lg:gap-8">

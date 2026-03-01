@@ -20,7 +20,7 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-gray-200/80 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80">
-      <nav className="flex items-center justify-between gap-4 px-5 py-4 sm:px-8 md:px-10  lg:px-16  xl:px-24 2xl:px-40">
+      <nav className="mx-auto w-full max-w-7xl flex items-center justify-between gap-4 px-4 sm:px-6 lg:px-8 py-4">
         {/* Left: Logo */}
         <Link
           href="#home"
