@@ -1,5 +1,4 @@
 import { Star } from "lucide-react";
-import { cn } from "@/lib/utils";
 
 const testimonials = [
   {
@@ -63,7 +62,9 @@ export function TestimonialsSection() {
                   </div>
 
                   {/* Testimonial Text */}
-                  <p className="text-gray-700 leading-relaxed mb-8">"{text}"</p>
+                  <p className="text-gray-700 leading-relaxed mb-8">
+                    &quot;{text}&quot;
+                  </p>
 
                   {/* Author */}
                   <div className="flex items-center gap-4">
