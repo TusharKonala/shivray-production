@@ -1,4 +1,3 @@
-import Link from "next/link";
 import {
   Share2,
   Search,
@@ -16,48 +15,48 @@ const services = [
     title: "Social Media Marketing",
     description:
       "Engage your audience and build brand awareness across all major social platforms with data-driven strategies.",
-    href: "#services",
+    href: "#contact",
   },
   {
     icon: Search,
     title: "SEO",
     description:
       "Dominate search rankings with our proven SEO techniques that drive organic traffic and boost visibility.",
-    href: "#services",
+    href: "#contact",
   },
   {
     icon: Code,
     title: "Web Development",
     description:
       "Create stunning, high-performance websites that convert visitors into customers with cutting-edge technology.",
-    href: "#services",
+    href: "#contact",
   },
   {
     icon: Smartphone,
     title: "App Development",
     description:
       "Build powerful mobile applications that deliver exceptional user experiences on iOS and Android.",
-    href: "#services",
+    href: "#contact",
   },
   {
     icon: Palette,
     title: "Branding",
     description:
       "Craft a unique brand identity that resonates with your target audience and stands out in the market.",
-    href: "#services",
+    href: "#contact",
   },
   {
     icon: BarChart3,
     title: "Performance Analytics",
     description:
       "Track and optimize your campaigns with data-driven insights and real-time analytics that fuel growth.",
-    href: "#services",
+    href: "#contact",
   },
 ] as const;
 
 export function ServicesSection() {
   return (
-    <section className="w-full bg-white" aria-labelledby="services-heading">
+    <section id="services" className="w-full bg-white" aria-labelledby="services-heading">
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-6 py-10 sm:gap-8 sm:py-14 lg:gap-12 lg:py-16">
           {/* ITEM 1 – Heading Block */}
@@ -114,13 +113,13 @@ export function ServicesSection() {
                       {title}
                     </h3>
                     <p className="text-gray-600 sm:text-base">{description}</p>
-                    <Link
+                    <a
                       href={href}
                       className="inline-flex items-center gap-1.5 text-sm font-semibold uppercase tracking-wider text-orange-600 transition-colors hover:text-orange-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2"
                     >
                       LEARN MORE
                       <ArrowRight className="size-4" aria-hidden />
-                    </Link>
+                    </a>
                   </div>
                 ),
               )}

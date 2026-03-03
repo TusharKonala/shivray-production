@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 const serviceLinks = [
@@ -37,7 +36,7 @@ export function Footer() {
 
           {/* Col 1 */}
           <div className="flex flex-col gap-3">
-            <Link
+            <a
               href="#home"
               className="inline-flex items-center gap-2 text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900"
               aria-label="DigitalPro home"
@@ -48,7 +47,7 @@ export function Footer() {
               <span className="text-2xl font-bold tracking-tight text-white">
                 DigitalPro
               </span>
-            </Link>
+            </a>
 
             <p className="text-gray-400">
               Transforming businesses through innovative digital solutions and
@@ -64,9 +63,9 @@ export function Footer() {
             <ul className="flex flex-col gap-2">
               {serviceLinks.map(({ href, label }) => (
                 <li key={label}>
-                  <Link href={href} className={linkClass}>
+                  <a href={href} className={linkClass}>
                     {label}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
@@ -80,9 +79,9 @@ export function Footer() {
             <ul className="flex flex-col gap-2">
               {companyLinks.map(({ href, label }) => (
                 <li key={label}>
-                  <Link href={href} className={linkClass}>
+                  <a href={href} className={linkClass}>
                     {label}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
@@ -131,9 +130,9 @@ export function Footer() {
               {/* Right */}
               <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-gray-400 lg:justify-end">
                 {legalLinks.map(({ href, label }) => (
-                  <Link key={label} href={href} className={linkClass}>
+                  <a key={label} href={href} className={linkClass}>
                     {label}
-                  </Link>
+                  </a>
                 ))}
               </div>
             </div>

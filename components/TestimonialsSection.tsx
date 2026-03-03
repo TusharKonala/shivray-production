@@ -23,7 +23,7 @@ const testimonials = [
 
 export function TestimonialsSection() {
   return (
-    <section className="w-full bg-white" aria-labelledby="testimonials-heading">
+    <section id="testimonials" className="w-full bg-white" aria-labelledby="testimonials-heading">
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-6 py-10 sm:gap-10 sm:py-12 lg:gap-12 lg:py-16">
           {/* Item 1 — Header (left aligned) */}

@@ -45,7 +45,7 @@ const projects = [
 
 export function WorkSection() {
   return (
-    <section className="w-full bg-gray-50" aria-labelledby="work-heading">
+    <section id="portfolio" className="w-full bg-gray-50" aria-labelledby="work-heading">
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-10 py-10 sm:gap-12 sm:py-14 lg:gap-14 lg:py-20">
           {/* Item 1 – Heading Block */}
@@ -122,7 +122,7 @@ export function WorkSection() {
               )}
             >
               <Link
-                href="#portfolio"
+                href="#contact"
                 className="inline-flex items-center gap-2"
               >
                 View All Projects
