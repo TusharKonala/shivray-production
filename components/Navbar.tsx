@@ -93,13 +93,13 @@ export function Navbar() {
           <ul className="flex flex-col gap-1">
             {navLinks.map(({ href, label }) => (
               <li key={href}>
-                <Link
+                <a
                   href={href}
                   onClick={() => setMobileMenuOpen(false)}
                   className="block rounded-md px-3 py-2.5 text-base font-medium text-gray-600 transition-colors hover:bg-orange-50 hover:text-orange-600 active:bg-orange-100 active:text-orange-600"
                 >
                   {label}
-                </Link>
+                </a>
               </li>
             ))}
           </ul>
@@ -109,14 +109,14 @@ export function Navbar() {
               asChild
               className="w-full max-w-sm rounded-none justify-center h-10 bg-orange-600 text-white hover:bg-orange-700"
             >
-              <Link
+              <a
                 href="#contact"
                 onClick={() => setMobileMenuOpen(false)}
                 className="flex items-center gap-2"
               >
                 Get Started
                 <ArrowRight className="size-4" />
-              </Link>
+              </a>
             </Button>
           </div>
         </div>

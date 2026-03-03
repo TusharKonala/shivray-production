@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -40,10 +39,10 @@ export function Hero() {
                   "hover:bg-orange-700 focus-visible:ring-orange-500",
                 )}
               >
-                <Link href="#contact" className="flex items-center gap-2">
+                <a href="#contact" className="flex items-center gap-2">
                   Start your Project
                   <span aria-hidden>→</span>
-                </Link>
+                </a>
               </Button>
 
               <Button
@@ -54,7 +53,7 @@ export function Hero() {
                   "hover:bg-orange-50 hover:border-orange-600 hover:text-orange-600",
                 )}
               >
-                <Link href="#portfolio">View Our Work</Link>
+                <a href="#portfolio">View Our Work</a>
               </Button>
             </div>
           </div>
