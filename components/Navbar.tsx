@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { Menu, ArrowRight, X } from "lucide-react";
+import { Menu, ArrowRight, X, Clapperboard } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -27,14 +27,19 @@ export function Navbar() {
           className="flex shrink-0 items-center gap-2 text-gray-900 rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2"
           aria-label="DigitalPro home"
         >
-          <span className="flex h-11 w-11 items-center justify-center rounded-none bg-orange-600 text-xl font-bold text-white">
-            D
+          <span className="flex h-9 w-9 sm:h-11 sm:w-11 items-center justify-center rounded-none bg-orange-600 text-xl font-bold text-white">
+            <Clapperboard
+              className="w-[18px] h-[18px] sm:w-[22px] sm:h-[22px]"
+              strokeWidth={2.5}
+            />
           </span>
-          <span className="text-2xl font-bold tracking-tight">DigitalPro</span>
+          <span className="text-lg sm:text-xl lg:text-2xl font-bold tracking-tight">
+            SHIVRAY PRODUCTION
+          </span>
         </Link>
 
         {/* Center: Links (Desktop only ≥1024px) */}
-        <div className="hidden lg:flex items-center gap-6">
+        <div className="hidden xl:flex items-center gap-6">
           {navLinks.map(({ href, label }) => (
             <Link
               key={href}
@@ -52,7 +57,7 @@ export function Navbar() {
           <Button
             asChild
             className={cn(
-              "hidden lg:inline-flex h-11 bg-orange-600 px-4 text-white rounded-none",
+              "hidden xl:inline-flex h-11 bg-orange-600 px-4 text-white rounded-none",
               "hover:bg-orange-700 focus-visible:ring-orange-500",
             )}
           >
@@ -67,7 +72,7 @@ export function Navbar() {
             type="button"
             variant="ghost"
             size="icon"
-            className="lg:hidden size-9 text-gray-600 hover:bg-orange-50 hover:text-orange-600"
+            className="xl:hidden size-9 text-gray-600 hover:bg-orange-50 hover:text-orange-600"
             onClick={() => setMobileMenuOpen((open) => !open)}
             aria-expanded={mobileMenuOpen}
             aria-controls="mobile-menu"
@@ -85,7 +90,7 @@ export function Navbar() {
       <div
         id="mobile-menu"
         className={cn(
-          "lg:hidden overflow-hidden transition-[max-height,opacity] duration-200 ease-out",
+          "xl:hidden overflow-hidden transition-[max-height,opacity] duration-200 ease-out",
           mobileMenuOpen ? "max-h-[80vh] opacity-100" : "max-h-0 opacity-0",
         )}
       >
