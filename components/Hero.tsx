@@ -39,7 +39,7 @@ export function Hero() {
             </h1>
 
             {/* Description */}
-            <p className="max-w-2xl md:max-w-6xl text-base leading-relaxed text-gray-600 sm:text-lg lg:text-xl">
+            <p className="max-w-6xl text-base leading-relaxed text-gray-600 sm:text-lg lg:text-xl">
               We deliver high-impact media, digital marketing, and strategic
               campaign content that enables brands, organizations, and leaders
               to expand their reach, strengthen audience engagement, and drive

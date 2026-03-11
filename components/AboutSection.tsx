@@ -1,17 +1,10 @@
 import Image from "next/image";
 
-const listItems = [
-  "Data-driven strategies that deliver measurable ROI",
-  "Award-winning creative team with proven expertise",
-  "End-to-end solutions from concept to execution",
-  "Transparent communication and dedicated support",
-] as const;
-
 export function AboutSection() {
   return (
     <section id="about" aria-labelledby="about-heading" className="bg-gray-50">
       <div className="mx-auto w-full max-w-7xl border-b border-gray-200/80 px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 items-center gap-8 py-10 sm:py-12 sm:gap-10 lg:grid-cols-2 lg:gap-12 lg:py-20">
+        <div className="grid grid-cols-1 items-center gap-8 py-8 sm:py-10 md:py-12 sm:gap-10 lg:grid-cols-2 lg:gap-12 xl:py-14">
           {/* Column 1: Image */}
           <div className="relative w-full overflow-hidden h-[320px] sm:h-[380px] lg:h-[400px]">
             <Image
@@ -32,26 +25,39 @@ export function AboutSection() {
               id="about-heading"
               className="text-3xl font-bold leading-tight text-gray-900 sm:text-4xl lg:text-5xl"
             >
-              We Build Digital Experiences That Drive Growth
+              Strategic Media & Campaign Solutions
             </h2>
-            <p className="max-w-xl text-gray-600 sm:text-lg">
-              Founded in 2011, DigitalPro has been at the forefront of digital
-              innovation, helping businesses of all sizes achieve their online
-              goals. Our passionate team of strategists, designers, and
-              developers work together to create solutions that matter.
+            <p>
+              <strong>Shivray Production</strong> is a dynamic political media
+              and campaign strategy company dedicated to empowering leaders and
+              organizations with impactful communication and strategic
+              execution. In today’s fast-moving political landscape, success
+              requires more than just a vision; it demands powerful
+              storytelling, strategic planning, and a strong digital presence.
+              Shivray Production brings all these elements together to help
+              political leaders connect with people, build influence, and
+              strengthen their public image.
             </p>
-            <ul className="space-y-3">
-              {listItems.map((item) => (
-                <li key={item}>
-                  <div className="flex items-start gap-4">
-                    <div className="w-1 h-1 bg-orange-600 mt-3 flex-shrink-0" />
-                    <span className="text-gray-700 text-sm sm:text-base">
-                      {item}
-                    </span>
-                  </div>
-                </li>
-              ))}
-            </ul>
+            <p>
+              Our team specializes in political campaign management, social
+              media promotion, strategic consulting, and high-quality visual
+              production. From creating compelling digital content to designing
+              complete election strategies, we provide end-to-end solutions that
+              support leaders throughout their political journey.
+            </p>
+            <p>
+              Over the years, Shivray Production has worked with several
+              respected political leaders, parties, and public representatives
+              across Maharashtra. Our experience includes collaborations related
+              to leaders associated with{" "}
+              <strong>Nationalist Congress Party led by Ajitdada Pawar</strong>,
+              <strong> Swarajya Party led by Sambhaji Raje Bhosale</strong>,
+              work connected with the <strong>Raigad Fort Authority</strong>,
+              and election campaigns for
+              <strong> MLAs, MPs, and Corporators</strong>. Our goal is simple
+              to transform leadership vision into impactful public
+              communication.
+            </p>
           </div>
         </div>
       </div>
