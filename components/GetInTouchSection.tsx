@@ -1,3 +1,6 @@
+"use client";
+
+import React, { useState } from "react";
 import {
   Mail,
   Phone,
@@ -8,11 +11,55 @@ import {
   Linkedin,
   ArrowRight,
 } from "lucide-react";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 export function GetInTouchSection() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [successMessage, setSuccessMessage] = useState<string | null>(null);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
+
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    setSuccessMessage(null);
+    setErrorMessage(null);
+
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+
+    const name = String(formData.get("name") || "").trim();
+    const email = String(formData.get("email") || "").trim();
+    const company = String(formData.get("company") || "").trim();
+    const project = String(formData.get("project") || "").trim();
+
+    if (!name || !email || !project) {
+      setErrorMessage("Please fill in all required fields.");
+      return;
+    }
+
+    try {
+      setIsSubmitting(true);
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ name, email, company, project }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Request failed");
+      }
+
+      setSuccessMessage("Thank you! Your message has been sent.");
+      form.reset();
+    } catch {
+      setErrorMessage("Something went wrong. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  }
+
   return (
     <section
       id="contact"
@@ -117,7 +164,10 @@ export function GetInTouchSection() {
 
           {/* Column 2: Form */}
           <div className="flex h-full items-stretch">
-            <form className="flex w-full flex-col gap-5 rounded-none bg-white p-6 shadow-sm sm:p-8">
+            <form
+              className="flex w-full flex-col gap-5 rounded-none bg-white p-6 shadow-sm sm:p-8"
+              onSubmit={handleSubmit}
+            >
               <div className="flex flex-col gap-2">
                 <label
                   htmlFor="name"
@@ -129,6 +179,7 @@ export function GetInTouchSection() {
                   id="name"
                   name="name"
                   type="text"
+                  required
                   placeholder="Enter your full name"
                   className="w-full rounded-none border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 outline-none placeholder:text-gray-400 focus:border-orange-600 focus:ring-2 focus:ring-orange-500/40 sm:text-base"
                 />
@@ -145,6 +196,7 @@ export function GetInTouchSection() {
                   id="email"
                   name="email"
                   type="email"
+                  required
                   placeholder="Enter your email address"
                   className="w-full rounded-none border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 outline-none placeholder:text-gray-400 focus:border-orange-600 focus:ring-2 focus:ring-orange-500/40 sm:text-base"
                 />
@@ -177,6 +229,7 @@ export function GetInTouchSection() {
                   id="project"
                   name="project"
                   rows={4}
+                  required
                   placeholder="Tell us about your project, goals, and timelines"
                   className="w-full min-h-[140px] resize-vertical rounded-none border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 outline-none placeholder:text-gray-400 focus:border-orange-600 focus:ring-2 focus:ring-orange-500/40 sm:text-base"
                 />
@@ -184,16 +237,30 @@ export function GetInTouchSection() {
 
               <Button
                 type="submit"
+                disabled={isSubmitting}
                 className={cn(
                   "mt-2 h-11 w-full cursor-pointer rounded-none bg-orange-600 px-4 text-base font-semibold text-white sm:h-12 sm:text-lg",
                   "hover:bg-orange-700 focus-visible:ring-orange-500",
                 )}
               >
                 <span className="inline-flex items-center gap-2">
-                  Send Message
-                  <ArrowRight className="h-4 w-4" aria-hidden />
+                  {isSubmitting ? "Sending..." : "Send Message"}
+                  {!isSubmitting && (
+                    <ArrowRight className="h-4 w-4" aria-hidden />
+                  )}
                 </span>
               </Button>
+
+              {(successMessage || errorMessage) && (
+                <p
+                  className={cn(
+                    "text-sm",
+                    successMessage ? "text-green-600" : "text-red-600",
+                  )}
+                >
+                  {successMessage ?? errorMessage}
+                </p>
+              )}
             </form>
           </div>
         </div>
