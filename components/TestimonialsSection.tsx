@@ -41,7 +41,7 @@ export function TestimonialsSection() {
             >
               What Our Clients Say
             </h2>
-            <p className="max-w-2xl text-gray-600 text-xl">
+            <p className="max-w-2xl text-foreground  text-xl">
               Don&apos;t just take our word for it. Here&apos;s what industry
               leaders have to say about working with us.
             </p>
