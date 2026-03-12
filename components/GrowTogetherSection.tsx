@@ -17,9 +17,10 @@ export function GrowTogetherSection() {
 
             <div className="flex flex-col gap-4 text-base text-foreground sm:text-lg lg:text-xl">
               <p>
-                When you partner with Shivray Production, you’re not just
-                choosing a service provider, you&apos;re choosing a team that is
-                committed to your vision, your growth, and your success.
+                When you partner with <strong>Shivray Production</strong>,
+                you’re not just choosing a service provider, you&apos;re
+                choosing a team that is committed to your vision, your growth,
+                and your success.
               </p>
 
               <p>
@@ -43,8 +44,11 @@ export function GrowTogetherSection() {
               </p>
 
               <p>
-                Join hands with Shivray production where your vision meets
-                strategy, creativity, and real results.
+                Join hands with Shivray Production where your{" "}
+                <strong>
+                  vision meets strategy, creativity, and real results
+                </strong>
+                .
               </p>
             </div>
           </div>
