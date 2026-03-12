@@ -45,9 +45,13 @@ const projects = [
 
 export function WorkSection() {
   return (
-    <section id="portfolio" className="w-full bg-gray-50" aria-labelledby="work-heading">
+    <section
+      id="portfolio"
+      className="w-full bg-white"
+      aria-labelledby="work-heading"
+    >
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col gap-10 py-10 sm:gap-12 sm:py-14 lg:gap-14 lg:py-20">
+        <div className="flex flex-col gap-10 py-8 sm:gap-12 sm:py-10 lg:gap-14 lg:py-14">
           {/* Item 1 – Heading Block */}
           <div className="flex flex-col items-start gap-3 text-left sm:gap-5">
             <span className="text-xs font-semibold uppercase tracking-wider text-orange-600">
@@ -121,10 +125,7 @@ export function WorkSection() {
                 "hover:bg-orange-700 focus-visible:ring-orange-500",
               )}
             >
-              <Link
-                href="#contact"
-                className="inline-flex items-center gap-2"
-              >
+              <Link href="#contact" className="inline-flex items-center gap-2">
                 View All Projects
                 <ArrowRight className="size-4 sm:size-5" aria-hidden />
               </Link>

@@ -16,7 +16,7 @@ export function GetInTouchSection() {
   return (
     <section
       id="contact"
-      className="w-full bg-gray-50"
+      className="w-full bg-white"
       aria-labelledby="contact-heading"
     >
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -201,4 +201,3 @@ export function GetInTouchSection() {
     </section>
   );
 }
-
