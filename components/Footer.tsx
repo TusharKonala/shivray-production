@@ -1,13 +1,14 @@
 "use client";
 
-import { ArrowRight } from "lucide-react";
+import Link from "next/link";
+import { Clapperboard } from "lucide-react";
 
 const serviceLinks = [
-  { href: "#services", label: "Social Media Marketing" },
-  { href: "#services", label: "SEO" },
-  { href: "#services", label: "Web Development" },
-  { href: "#services", label: "App Development" },
-  { href: "#services", label: "Branding" },
+  { href: "#services", label: "Campaign Strategy" },
+  { href: "#services", label: "Social Media Management" },
+  { href: "#services", label: "Political Consulting" },
+  { href: "#services", label: "Photo & Video Production" },
+  { href: "#services", label: "Election Management" },
 ] as const;
 
 const companyLinks = [
@@ -15,8 +16,15 @@ const companyLinks = [
   { href: "#portfolio", label: "Portfolio" },
   { href: "#testimonials", label: "Testimonials" },
   { href: "#contact", label: "Contact" },
-  { href: "#careers", label: "Careers" },
 ] as const;
+
+const contactEmail = "hello@digitalpro.com";
+const contactPhone = "+1 (234) 567-890";
+const contactLocation =
+  "123 Digital Avenue, Suite 400, San Francisco, CA 94105";
+const contactLocationMap =
+  "https://www.google.com/maps/search/?api=1&query=123+Digital+Avenue+Suite+400+San+Francisco+CA+94105";
+const contactWhatsApp = "https://wa.me/1234567890";
 
 const legalLinks = [
   { href: "#privacy", label: "Privacy Policy" },
@@ -36,23 +44,23 @@ export function Footer() {
 
           {/* Col 1 */}
           <div className="flex flex-col gap-3">
-            <a
+            <Link
               href="#home"
-              className="inline-flex items-center gap-2 text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900"
-              aria-label="DigitalPro home"
+              className="inline-flex items-center gap-2 text-white rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900"
+              aria-label="Shivray Production home"
             >
-              <span className="flex h-11 w-11 items-center justify-center bg-orange-600 text-xl font-bold text-white">
-                D
+              <span className="flex h-9 w-9 sm:h-11 sm:w-11 items-center justify-center rounded-none bg-orange-600 text-white">
+                <Clapperboard
+                  className="w-[18px] h-[18px] sm:w-[22px] sm:h-[22px]"
+                  strokeWidth={2.5}
+                />
               </span>
-              <span className="text-2xl font-bold tracking-tight text-white">
-                DigitalPro
+              <span className="text-lg sm:text-xl lg:text-2xl font-bold tracking-tight">
+                SHIVRAY PRODUCTION
               </span>
-            </a>
+            </Link>
 
-            <p className="text-gray-400">
-              Transforming businesses through innovative digital solutions and
-              strategic marketing.
-            </p>
+            <p className="text-gray-400">The power behind political success.</p>
           </div>
 
           {/* Col 2 */}
@@ -87,33 +95,51 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Col 4 */}
+          {/* Col 4 – Contact */}
           <div className="flex flex-col gap-4">
             <h3 className="text-sm font-semibold uppercase tracking-wider text-white">
-              NEWSLETTER
+              CONTACT
             </h3>
-            <p className="text-gray-400">
-              Stay updated with our latest news and insights.
-            </p>
-
-            <form
-              className="flex gap-2"
-              onSubmit={(e) => e.preventDefault()}
-              aria-label="Newsletter signup"
-            >
-              <input
-                type="email"
-                placeholder="Your email"
-                className="min-w-0 flex-1 border border-gray-700 bg-gray-800 px-3 py-2.5 text-sm text-white outline-none placeholder:text-gray-500 focus:border-orange-600 focus:ring-1 focus:ring-orange-600"
-              />
-              <button
-                type="submit"
-                className="flex h-[42px] w-[42px] shrink-0 cursor-pointer items-center justify-center bg-orange-600 text-white transition-colors hover:bg-orange-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900"
-                aria-label="Subscribe"
-              >
-                <ArrowRight className="h-5 w-5" aria-hidden />
-              </button>
-            </form>
+            <ul className="flex flex-col gap-2">
+              <li>
+                <a
+                  href={`mailto:${contactEmail}`}
+                  className={linkClass}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {contactEmail}
+                </a>
+              </li>
+              <li>
+                <a
+                  href={`tel:${contactPhone.replace(/\s/g, "")}`}
+                  className={linkClass}
+                >
+                  {contactPhone}
+                </a>
+              </li>
+              <li>
+                <a
+                  href={contactLocationMap}
+                  className={linkClass}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {contactLocation}
+                </a>
+              </li>
+              <li>
+                <a
+                  href={contactWhatsApp}
+                  className={linkClass}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  WhatsApp / Contact
+                </a>
+              </li>
+            </ul>
           </div>
 
           {/* ===== FULL WIDTH DIVIDER ===== */}
@@ -124,7 +150,7 @@ export function Footer() {
             <div className="flex flex-col items-center gap-2 py-2 text-sm text-gray-400 lg:flex-row lg:justify-between">
               {/* Left */}
               <div className="text-center lg:text-left">
-                © 2026 DigitalPro. All rights reserved.
+                © 2026 Shivray Production. All rights reserved.
               </div>
 
               {/* Right */}
