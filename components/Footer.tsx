@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Clapperboard } from "lucide-react";
 
 const serviceLinks = [
@@ -36,6 +37,15 @@ const linkClass =
   "text-gray-400 transition-colors hover:text-orange-500 focus:outline-none focus-visible:text-orange-500";
 
 export function Footer() {
+  const pathname = usePathname();
+
+  function handleLogoClick(e: React.MouseEvent<HTMLAnchorElement>) {
+    if (pathname === "/") {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }
+
   return (
     <footer className="w-full bg-gray-900" role="contentinfo">
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -45,7 +55,8 @@ export function Footer() {
           {/* Col 1 */}
           <div className="flex flex-col gap-3">
             <Link
-              href="#home"
+              href="/"
+              onClick={handleLogoClick}
               className="inline-flex items-center gap-2 text-white rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900"
               aria-label="Shivray Production home"
             >
