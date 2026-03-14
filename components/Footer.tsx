@@ -27,9 +27,9 @@ const contactLocationMap =
 const contactWhatsApp = "https://wa.me/1234567890";
 
 const legalLinks = [
-  { href: "#privacy", label: "Privacy Policy" },
-  { href: "#terms", label: "Terms of Service" },
-  { href: "#cookies", label: "Cookie Policy" },
+  { href: "/privacy-policy", label: "Privacy Policy" },
+  { href: "/terms-of-service", label: "Terms of Service" },
+  { href: "/cookie-policy", label: "Cookie Policy" },
 ] as const;
 
 const linkClass =
