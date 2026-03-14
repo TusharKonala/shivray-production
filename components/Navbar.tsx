@@ -72,10 +72,10 @@ export function Navbar() {
               "hover:bg-orange-700 focus-visible:ring-orange-500",
             )}
           >
-            <Link href="#contact" className="flex items-center gap-2">
+            <a href="#contact" className="flex items-center gap-2">
               Get Started
               <ArrowRight className="size-4" />
-            </Link>
+            </a>
           </Button>
 
           {/* Mobile + Tablet Hamburger */}
@@ -130,7 +130,15 @@ export function Navbar() {
             >
               <a
                 href="#contact"
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={(e) => {
+                  e.preventDefault();
+
+                  document
+                    .getElementById("contact")
+                    ?.scrollIntoView({ behavior: "smooth" });
+
+                  setMobileMenuOpen(false);
+                }}
                 className="flex items-center gap-2"
               >
                 Get Started
