@@ -125,10 +125,10 @@ export function WorkSection() {
                 "hover:bg-orange-700 focus-visible:ring-orange-500",
               )}
             >
-              <Link href="#contact" className="inline-flex items-center gap-2">
-                View All Projects
+              <a href="#contact" className="inline-flex items-center gap-2">
+                Start Your Project
                 <ArrowRight className="size-4 sm:size-5" aria-hidden />
-              </Link>
+              </a>
             </Button>
           </div>
         </div>
