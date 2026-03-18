@@ -5,40 +5,36 @@ import Image from "next/image";
 
 const projects = [
   {
-    image: "/web-dev.jpg",
-    category: "WEB DEVELOPMENT",
-    title: "E-Commerce Revolution",
-    description: "250% increase in conversions",
+    image: "/rockfit.jpg",
+    category: "DIGITAL MARKETING",
+    title: "Rockfit Fitness",
+    description:
+      "Since Shivray Production started handling our digital presence and promotions, we have seen clear business growth and now consistently acquire new clients.",
+    highlight: "Consistent Client Acquisition",
   },
   {
-    image: "/fintech.jpg",
-    category: "APP DEVELOPMENT",
-    title: "FinTech Mobile App",
-    description: "100K+ downloads in 3 months",
+    image: "/school.jpg",
+    category: "BRAND DEVELOPMENT",
+    title: "Unique School, Alandi",
+    description:
+      "Through complete campaign planning and digital marketing execution, Unique School achieved strong results and is now emerging as one of the leading school brands in Alandi.",
+    highlight: "Top Emerging School Brand",
   },
   {
-    image: "/luxury-branding.jpg",
+    image: "/rakhi.jpg",
     category: "BRANDING",
-    title: "Luxury Brand Identity",
-    description: "Brand recognition up 180%",
+    title: "Aastha Rakhi",
+    description:
+      "Shivray Production helped transform a Rakhi business into a recognizable brand through strong planning, strategy, and impactful creative direction.",
+    highlight: "Business to Brand Transformation",
   },
   {
-    image: "/marketing-strategy.jpg",
-    category: "SOCIAL MEDIA",
-    title: "SaaS Marketing Campaign",
-    description: "5M impressions, 45% engagement",
-  },
-  {
-    image: "/seo.jpg",
-    category: "SEO",
-    title: "Enterprise SEO Strategy",
-    description: "Page 1 rankings for 50+ keywords",
-  },
-  {
-    image: "/tech-startup.jpg",
-    category: "FULL SERVICE",
-    title: "Tech Startup Launch",
-    description: "$2M funding raised post-launch",
+    image: "/campaign.jpg",
+    category: "CAMPAIGN MANAGEMENT",
+    title: "Election Campaign",
+    description:
+      "Strategic planning and communication helped build strong public connection and played a crucial role in the overall success of the election campaign.",
+    highlight: "Strong Public Connection Built",
   },
 ] as const;
 
@@ -71,47 +67,46 @@ export function WorkSection() {
           {/* Item 2 – Projects Grid (2 rows × 3 cols) */}
           {/* Item 2 – Projects Grid */}
           <div className="mx-auto w-full">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-gray-200">
-              {projects.map(({ image, category, title, description }) => (
-                <div
-                  key={title}
-                  className="group bg-white transition-colors hover:bg-gray-50"
-                >
-                  {/* Image Wrapper */}
-                  <div className="relative w-full aspect-[3/2] overflow-hidden">
-                    <Image
-                      src={image}
-                      alt={title}
-                      fill
-                      className="object-cover transition-all duration-700 grayscale-[40%] group-hover:grayscale-0 group-hover:scale-105"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-gray-200">
+              {projects.map(
+                ({ image, category, title, description, highlight }) => (
+                  <div
+                    key={title}
+                    className="group bg-white transition-colors hover:bg-gray-50"
+                  >
+                    {/* Image Wrapper */}
+                    <div className="relative w-full aspect-[3/2] overflow-hidden">
+                      <Image
+                        src={image}
+                        alt={title}
+                        fill
+                        className="object-cover transition-all duration-700 grayscale-[40%] group-hover:grayscale-0 group-hover:scale-105"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      />
 
-                    {/* Orange Hover Overlay (ONLY ON IMAGE) */}
-                    <div className="absolute inset-0 bg-orange-600/80 opacity-0 transition-opacity duration-300 group-hover:opacity-100 flex items-end p-6">
-                      <div className="text-white">
-                        <div className="text-xs font-semibold uppercase tracking-wider mb-1">
-                          {category}
+                      {/* Orange Hover Overlay (ONLY ON IMAGE) */}
+                      <div className="absolute inset-0 bg-orange-600/80 opacity-0 transition-opacity duration-300 group-hover:opacity-100 flex items-end p-6">
+                        <div className="text-white">
+                          <div className="text-sm">{highlight}</div>
                         </div>
-                        <div className="text-sm">{description}</div>
                       </div>
                     </div>
+
+                    {/* Text Section (Unchanged) */}
+                    <div className="flex flex-col gap-2 p-5 sm:gap-3 sm:p-6">
+                      <span className="text-xs font-semibold uppercase tracking-wider text-orange-600">
+                        {category}
+                      </span>
+
+                      <h3 className="text-xl font-bold text-gray-900 sm:text-2xl">
+                        {title}
+                      </h3>
+
+                      <p className="text-sm text-gray-600">{description}</p>
+                    </div>
                   </div>
-
-                  {/* Text Section (Unchanged) */}
-                  <div className="flex flex-col gap-2 p-5 sm:gap-3 sm:p-6">
-                    <span className="text-xs font-semibold uppercase tracking-wider text-orange-600">
-                      {category}
-                    </span>
-
-                    <h3 className="text-xl font-bold text-gray-900 sm:text-2xl">
-                      {title}
-                    </h3>
-
-                    <p className="text-sm text-gray-600">{description}</p>
-                  </div>
-                </div>
-              ))}
+                ),
+              )}
             </div>
           </div>
 
