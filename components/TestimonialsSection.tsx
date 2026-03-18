@@ -2,22 +2,40 @@ import { Star } from "lucide-react";
 
 const testimonials = [
   {
-    text: "Working with this agency transformed our digital presence completely. Their strategic approach and attention to detail resulted in a 300% increase in qualified leads.",
+    text: "Great firm to work with and very creative team. All our events and branding work has been completed very diligently. Their team works hard day and night and truly goes above and beyond to achieve results.",
+    initial: "R",
+    name: "Ram Phuge",
+    title: "Mangalam Group",
+  },
+  {
+    text: "Working with Shivray Production has been a great experience. Their professionalism and creativity in advertising posts and video promotions have helped us attract more customers and improve our brand presence.",
     initial: "S",
-    name: "Sarah Johnson",
-    title: "CEO, TechFlow Solutions",
+    name: "Syed Nasseer Hussaini",
+    title: "Owner, Fitness Arena Gym & Zafaa Banquets",
   },
   {
-    text: "The team delivered beyond our expectations. Their expertise in SEO and content strategy helped us dominate our niche in just 6 months.",
-    initial: "M",
-    name: "Michael Chen",
-    title: "Marketing Director, GrowthLabs",
+    text: "Their team understands the importance of communication and presentation. From creative content to strategic planning, everything was handled professionally with great attention to detail.",
+    initial: "B",
+    name: "Bandu Khandve",
+    title: "Owner, Jagatguru International School",
   },
   {
-    text: "From branding to web development, they handled everything seamlessly. Our new website is not just beautiful, it converts like crazy!",
-    initial: "E",
-    name: "Emily Rodriguez",
-    title: "Founder, Bloom Beauty",
+    text: "They have been a strong pillar in our journey. Their team handles promotions and content with creativity and strategy, and truly understands the vision to deliver real impact.",
+    initial: "U",
+    name: "Umesh Kate",
+    title: "Founder, Umesh Kate Youth Foundation",
+  },
+  {
+    text: "Their ability to emotionally connect our message with people makes them stand out. Shivray Production is not just a service provider, but a true partner in our journey.",
+    initial: "P",
+    name: "Poonam Vidhate",
+    title: "Founder, Wama Women’s Club",
+  },
+  {
+    text: "As a newly established publication, Shivray Production helped us shape our vision and strengthen our brand identity with a strong conceptual approach.",
+    initial: "S",
+    name: "Smita Shinde",
+    title: "Owner, Saavi Publications",
   },
 ] as const;
 
