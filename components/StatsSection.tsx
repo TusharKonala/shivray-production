@@ -3,7 +3,7 @@ import { Award, TrendingUp, Users, CircleCheck } from "lucide-react";
 const stats = [
   {
     icon: Award,
-    value: "500+",
+    value: "220+",
     label: "PROJECTS DELIVERED",
   },
   {
@@ -13,12 +13,12 @@ const stats = [
   },
   {
     icon: Users,
-    value: "150+",
+    value: "15+",
     label: "TEAM MEMBERS",
   },
   {
     icon: CircleCheck,
-    value: "15+",
+    value: "7+",
     label: "YEARS EXPERIENCE",
   },
 ] as const;
