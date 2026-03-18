@@ -1,36 +1,49 @@
 import { cn } from "@/lib/utils";
-import { Camera, Flag, Lightbulb, Megaphone, Target } from "lucide-react";
+import {
+  BarChart3,
+  Camera,
+  Megaphone,
+  Palette,
+  Radio,
+  Target,
+} from "lucide-react";
 
 const services = [
   {
-    icon: Target,
-    title: "Political Campaign Strategy",
+    icon: Camera,
+    title: "Creative Content Creation",
     description:
-      "At Shivray Production, we work as strategic partners and kingmakers for political leaders. Our team studies political landscapes, voter sentiment, and regional dynamics to design winning campaign strategies that help leaders connect with the people effectively.",
+      "We create impactful and engaging content for both political campaigns and corporate brands. From social media creatives and campaign visuals to videos and storytelling, our content is designed to capture attention, communicate clearly, and build strong audience connections.",
+  },
+  {
+    icon: BarChart3,
+    title: "Media Planning & Ad Buying",
+    description:
+      "Our team strategically plans and executes advertising campaigns across digital platforms, ensuring maximum reach and efficient budget utilization. We run targeted promotions that help leaders and brands increase visibility, engagement, and overall impact.",
+  },
+  {
+    icon: Radio,
+    title: "Traditional Advertising",
+    description:
+      "We extend digital campaigns with strategic communication approaches that strengthen brand presence and recall. Our focus remains on creating consistent messaging and visibility across platforms to ensure campaigns reach the right audience effectively.",
+  },
+  {
+    icon: Target,
+    title: "Strategic Campaign Management",
+    description:
+      "We specialize in end-to-end campaign management, combining political strategy with modern marketing techniques. From planning and positioning to execution, we help leaders and organizations run structured, effective, and result-driven campaigns.",
+  },
+  {
+    icon: Palette,
+    title: "Brand Development",
+    description:
+      "We help leaders and businesses build strong, recognizable brands through identity design, messaging, and consistent communication. Our approach ensures a clear image, stronger public perception, and long-term brand value.",
   },
   {
     icon: Megaphone,
-    title: "Social Media Management & Promotion",
+    title: "Digital Marketing",
     description:
-      "In today’s digital era, political presence online is essential. We manage and grow leaders’ social media profiles, create engaging content, handle daily postings, and run targeted promotional campaigns that increase visibility, public engagement, and credibility.",
-  },
-  {
-    icon: Lightbulb,
-    title: "Strategic Political Consulting",
-    description:
-      "Every constituency is different, and every campaign needs a unique strategy. Our team provides ground-level political insights and strategic guidance to help leaders understand where to focus, how to communicate, and which approach will work best in different regions.",
-  },
-  {
-    icon: Camera,
-    title: "Professional Photo & Video Production",
-    description:
-      "Visual storytelling plays a crucial role in modern political communication. Shivray Production offers a full range of professional media production services, including Political photoshoots, Cinematic campaign videos, Social media reels, Drone videography, Portrait photography, and Event documentation. Our creative team ensures every frame reflects leadership, vision, and authenticity.",
-  },
-  {
-    icon: Flag,
-    title: "Election Campaign Management",
-    description:
-      "From planning to execution, Shivray Production has experience handling the entire communication and promotional responsibilities during elections. We support leaders with digital campaigns, media content, and strategic planning to ensure a powerful presence throughout the election process.",
+      "From social media management to performance marketing, we provide complete digital solutions that help political leaders and businesses grow online, generate engagement, and build a powerful digital presence.",
   },
 ] as const;
 
@@ -66,75 +79,36 @@ export function ServicesSection() {
           </div>
 
           {/* ITEM 2 – Services Grid */}
+          {/* ITEM 2 – Services Grid */}
           <div className="mx-auto w-full max-w-6xl">
             <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-0 lg:grid-cols-3">
-              {services
-                .slice(0, 4)
-                .map(({ icon: Icon, title, description }, index) => (
-                  <div
-                    key={title}
-                    className={cn(
-                      "flex flex-col items-start gap-4 p-6 text-left transition-colors sm:gap-6 sm:p-8",
-                      "border border-gray-200 hover:bg-gray-50",
-                      // Tablet borders
-                      index % 2 === 0 && "md:border-l-0",
-                      index % 2 === 1 && "md:border-r-0",
-                      // Restore borders on desktop
-                      "lg:border-l lg:border-r",
-                      // Desktop borders
-                      index === 0 && "lg:border-l-0",
-                      index === 2 && "lg:border-r-0",
-                      "md:border-t-0",
-                      index === 3 && "lg:hidden",
-                    )}
-                  >
-                    <Icon
-                      className="size-9 shrink-0 text-orange-600 sm:size-10"
-                      aria-hidden
-                    />
-                    <h3 className="text-2xl font-bold text-gray-900">
-                      {title}
-                    </h3>
-                    <p className="text-gray-600 sm:text-base">{description}</p>
-                  </div>
-                ))}
-              <div className="flex md:flex lg:hidden col-span-1 md:col-span-2 md:justify-center">
-                <div className="flex w-full md:max-w-md flex-col items-start gap-4 p-6 sm:p-8 border border-gray-200 md:border-t-0 md:border-b-0 hover:bg-gray-50">
-                  <TabletIcon className="size-9 shrink-0 text-orange-600 sm:size-10" />
-                  <h3 className="text-2xl font-bold text-gray-900">
-                    {tabletService.title}
-                  </h3>
-                  <p className="text-gray-600 sm:text-base">
-                    {tabletService.description}
-                  </p>
+              {services.map(({ icon: Icon, title, description }, index) => (
+                <div
+                  key={title}
+                  className={cn(
+                    "flex flex-col items-start gap-4 p-6 text-left transition-colors sm:gap-6 sm:p-8",
+                    "border border-gray-200 hover:bg-gray-50",
+
+                    // Tablet borders (2 cols)
+                    index % 2 === 0 && "md:border-l-0",
+                    index % 2 === 1 && "md:border-r-0",
+                    "md:border-t-0",
+                    "md:border-b-0",
+
+                    // Desktop borders (3 cols)
+                    "lg:border-l lg:border-r",
+                    index % 3 === 0 && "lg:border-l-0", // first column
+                    index % 3 === 2 && "lg:border-r-0", // last column
+                  )}
+                >
+                  <Icon
+                    className="size-9 shrink-0 text-orange-600 sm:size-10"
+                    aria-hidden
+                  />
+                  <h3 className="text-2xl font-bold text-gray-900">{title}</h3>
+                  <p className="text-gray-600 sm:text-base">{description}</p>
                 </div>
-              </div>
-              <div className="hidden lg:flex col-span-3 justify-center">
-                {services
-                  .slice(3)
-                  .map(({ icon: Icon, title, description }, index) => (
-                    <div
-                      key={title}
-                      className={cn(
-                        "flex w-full max-w-md flex-col items-start gap-4 p-6 text-left transition-colors sm:gap-6 sm:p-8 border border-gray-200 hover:bg-gray-50",
-                        "border-t-0 border-b-0",
-                        index === 0 && "border-l-0",
-                        index === 1 && "border-r-0",
-                      )}
-                    >
-                      <Icon
-                        className="size-9 shrink-0 text-orange-600 sm:size-10"
-                        aria-hidden
-                      />
-                      <h3 className="text-2xl font-bold text-gray-900">
-                        {title}
-                      </h3>
-                      <p className="text-gray-600 sm:text-base">
-                        {description}
-                      </p>
-                    </div>
-                  ))}
-              </div>
+              ))}
             </div>
           </div>
         </div>
