@@ -17,32 +17,32 @@ const missionValues: Array<{
   {
     icon: MessageSquare,
     title: "Transparency & Communication",
-    text: "We believe in maintaining clear and open communication with our clients. From planning to campaign execution, our team ensures that leaders stay informed about every step of the process.",
+    text: "At Shivray Production, we believe in maintaining clear and transparent communication with our clients. Whether it is a political campaign or a corporate branding project, our team ensures that every stage—from strategy and planning to execution—is communicated effectively to deliver the best results.",
   },
   {
     icon: BarChart3,
     title: "Measurable Impact",
-    text: "Our campaigns are designed to create real engagement and measurable influence. We track audience reach, engagement levels, and campaign performance to continuously improve strategies.",
+    text: "Our campaigns and marketing strategies are designed to create real engagement and measurable results. From political outreach to corporate brand promotions, we track audience reach, engagement, and performance metrics to continuously improve strategies and deliver impactful outcomes.",
   },
   {
     icon: Users,
     title: "Collaboration & Leadership Vision",
-    text: "At Shivray Production, your vision is the foundation of everything we do. We work closely with leaders and their teams to ensure their message reaches the people in the most powerful and authentic way.",
+    text: "At Shivray Production, your vision becomes the foundation of our work. We collaborate closely with political leaders, organizations, and corporate brands to understand their goals and deliver communication strategies that create a powerful and authentic connection with their audience.",
   },
   {
     icon: Puzzle,
-    title: "Customized Political Solutions",
-    text: "No two political campaigns are the same. That's why we develop customized strategies and communication plans tailored to the needs of each leader, region, and election environment.",
+    title: "Customized Communication Solutions",
+    text: "Every campaign and brand has unique needs. That’s why we design customized communication and marketing strategies tailored for political leaders, businesses, and organizations to strengthen their identity and reach the right audience effectively.",
   },
   {
     icon: Brain,
     title: "Strategic Thinking",
-    text: "We go beyond content creation. Our team analyzes political trends, voter psychology, and regional dynamics to design strategic campaigns that strengthen public connection and influence.",
+    text: "Our team goes beyond basic content creation. We analyze audience behavior, market trends, voter psychology, and digital engagement patterns to design strategies that strengthen both political influence and corporate brand presence.",
   },
   {
     icon: Globe,
     title: "Multi-Platform Campaign Expertise",
-    text: "Modern political communication requires a strong presence across multiple platforms. Shivray Production creates integrated campaigns that ensure maximum reach and impact.",
+    text: "Modern communication requires a strong presence across multiple platforms. Shivray Production creates integrated campaigns across social media, digital media, video platforms, and on-ground promotions to maximize visibility and impact for both political campaigns and corporate brands.",
   },
 ];
 
