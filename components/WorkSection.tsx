@@ -46,7 +46,7 @@ export function WorkSection() {
       aria-labelledby="work-heading"
     >
       <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col gap-10 py-8 sm:gap-12 sm:py-10 lg:gap-14 lg:py-14">
+        <div className="flex flex-col gap-6 py-8 sm:gap-8 md:gap-10 sm:py-10 lg:gap-12 lg:py-14">
           {/* Item 1 – Heading Block */}
           <div className="flex flex-col items-start gap-3 text-left sm:gap-5">
             <span className="text-xs font-semibold uppercase tracking-wider text-orange-600">
@@ -111,7 +111,7 @@ export function WorkSection() {
           </div>
 
           {/* Item 3 – CTA Button */}
-          <div className="flex justify-start">
+          <div className="flex justify-center min-[430px]:justify-start">
             <Button
               asChild
               className={cn(
