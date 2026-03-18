@@ -47,9 +47,6 @@ const services = [
   },
 ] as const;
 
-const tabletService = services[4];
-const TabletIcon = tabletService.icon;
-
 export function ServicesSection() {
   return (
     <section
@@ -93,12 +90,13 @@ export function ServicesSection() {
                     index % 2 === 0 && "md:border-l-0",
                     index % 2 === 1 && "md:border-r-0",
                     "md:border-t-0",
-                    "md:border-b-0",
+                    index >= services.length - 2 && "md:border-b-0",
 
                     // Desktop borders (3 cols)
                     "lg:border-l lg:border-r",
                     index % 3 === 0 && "lg:border-l-0", // first column
                     index % 3 === 2 && "lg:border-r-0", // last column
+                    index >= services.length - 3 && "lg:border-b-0",
                   )}
                 >
                   <Icon
