@@ -5,11 +5,12 @@ import { usePathname } from "next/navigation";
 import { Clapperboard } from "lucide-react";
 
 const serviceLinks = [
-  { href: "#services", label: "Campaign Strategy" },
-  { href: "#services", label: "Social Media Management" },
-  { href: "#services", label: "Political Consulting" },
-  { href: "#services", label: "Photo & Video Production" },
-  { href: "#services", label: "Election Management" },
+  { href: "#services", label: "Creative Content Creation" },
+  { href: "#services", label: "Media Planning & Ad Buying" },
+  { href: "#services", label: "Traditional Advertising" },
+  { href: "#services", label: "Campaign Management" },
+  { href: "#services", label: "Brand Development" },
+  { href: "#services", label: "Digital Marketing" },
 ] as const;
 
 const companyLinks = [
@@ -19,13 +20,13 @@ const companyLinks = [
   { href: "#contact", label: "Contact" },
 ] as const;
 
-const contactEmail = "hello@digitalpro.com";
-const contactPhone = "+1 (234) 567-890";
+const contactEmail = "Shivray252@gmail.com";
+const contactPhone = "+91 9066252252 / +91 9404235252";
 const contactLocation =
-  "123 Digital Avenue, Suite 400, San Francisco, CA 94105";
-const contactLocationMap =
-  "https://www.google.com/maps/search/?api=1&query=123+Digital+Avenue+Suite+400+San+Francisco+CA+94105";
-const contactWhatsApp = "https://wa.me/1234567890";
+  "Phuge Building, Gavanevasti, Bhosari, Pimpri-Chinchwad, Maharashtra – 411039";
+const contactLocationMap = "https://maps.app.goo.gl/2uzuJ25CqNiruasR6";
+const contactWhatsApp =
+  "https://wa.me/919066252252?text=Hi%20I%20want%20to%20know%20more%20about%20your%20services";
 
 const legalLinks = [
   { href: "/privacy-policy", label: "Privacy Policy" },
