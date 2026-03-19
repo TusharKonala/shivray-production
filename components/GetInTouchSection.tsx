@@ -14,6 +14,13 @@ import {
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
+const contactEmail = "Shivray252@gmail.com";
+const contactPhoneDisplay = "+91 9066252252 / +91 9404235252";
+const contactPhonePrimary = "+919066252252";
+const contactLocation =
+  "Phuge Building, Gavanevasti, Bhosari, Pimpri-Chinchwad, Maharashtra – 411039";
+const contactLocationMap = "https://maps.app.goo.gl/2uzuJ25CqNiruasR6";
+
 export function GetInTouchSection() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
@@ -98,9 +105,12 @@ export function GetInTouchSection() {
                   <span className="text-sm font-semibold text-gray-900 sm:text-base">
                     EMAIL US
                   </span>
-                  <span className="text-sm text-gray-600 sm:text-base">
-                    hello@digitalpro.com
-                  </span>
+                  <a
+                    href={`mailto:${contactEmail}`}
+                    className="text-sm text-gray-600 sm:text-base hover:text-orange-600"
+                  >
+                    {contactEmail}
+                  </a>
                 </div>
               </div>
 
@@ -113,9 +123,12 @@ export function GetInTouchSection() {
                   <span className="text-sm font-semibold text-gray-900 sm:text-base">
                     CALL US
                   </span>
-                  <span className="text-sm text-gray-600 sm:text-base">
-                    +1 (234) 567-890
-                  </span>
+                  <a
+                    href={`tel:${contactPhonePrimary}`}
+                    className="text-sm text-gray-600 sm:text-base hover:text-orange-600"
+                  >
+                    {contactPhoneDisplay}
+                  </a>
                 </div>
               </div>
 
@@ -128,11 +141,14 @@ export function GetInTouchSection() {
                   <span className="text-sm font-semibold text-gray-900 sm:text-base">
                     VISIT US
                   </span>
-                  <span className="text-sm text-gray-600 sm:text-base">
-                    123 Digital Avenue, Suite 400
-                    <br />
-                    San Francisco, CA 94105
-                  </span>
+                  <a
+                    href={contactLocationMap}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-gray-600 sm:text-base hover:text-orange-600"
+                  >
+                    {contactLocation}
+                  </a>
                 </div>
               </div>
             </div>
