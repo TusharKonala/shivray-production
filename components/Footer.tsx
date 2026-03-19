@@ -22,6 +22,7 @@ const companyLinks = [
 
 const contactEmail = "Shivray252@gmail.com";
 const contactPhone = "+91 9066252252 / +91 9404235252";
+const contactPhonePrimary = "+919066252252";
 const contactLocation =
   "Phuge Building, Gavanevasti, Bhosari, Pimpri-Chinchwad, Maharashtra – 411039";
 const contactLocationMap = "https://maps.app.goo.gl/2uzuJ25CqNiruasR6";
@@ -124,10 +125,7 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a
-                  href={`tel:${contactPhone.replace(/\s/g, "")}`}
-                  className={linkClass}
-                >
+                <a href={`tel:${contactPhonePrimary}`} className={linkClass}>
                   {contactPhone}
                 </a>
               </li>
