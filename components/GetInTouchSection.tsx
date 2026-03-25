@@ -1,18 +1,10 @@
 "use client";
 
-import React, { useState } from "react";
-import {
-  Mail,
-  Phone,
-  MapPin,
-  Facebook,
-  Twitter,
-  Instagram,
-  Linkedin,
-  ArrowRight,
-} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { ArrowRight, Mail, MapPin, Phone } from "lucide-react";
+import { FaFacebookF, FaInstagram } from "react-icons/fa";
+import React, { useState } from "react";
 
 const contactEmail = "Shivray252@gmail.com";
 const contactPhoneDisplay = "+91 9066252252 / +91 9404235252";
@@ -160,19 +152,24 @@ export function GetInTouchSection() {
               </span>
               <div className="flex flex-wrap gap-3">
                 {[
-                  { icon: Facebook, label: "Facebook" },
-                  { icon: Twitter, label: "Twitter" },
-                  { icon: Instagram, label: "Instagram" },
-                  { icon: Linkedin, label: "LinkedIn" },
-                ].map(({ icon: Icon, label }) => (
-                  <button
-                    key={label}
-                    type="button"
-                    aria-label={label}
-                    className="flex h-12 w-12 cursor-pointer items-center justify-center rounded-none border border-gray-300 text-gray-600 transition-colors hover:bg-orange-600 hover:text-white"
+                  {
+                    icon: FaFacebookF,
+                    href: "http://facebook.com/Shivrayproduction?rdid=U14KV4GZlff43112&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1PqcWoy46R%2F#",
+                  },
+                  {
+                    icon: FaInstagram,
+                    href: "https://www.instagram.com/shivrayproduction?igsh=MWdxbGZ0NW9qaTJpZw%3D%3D",
+                  },
+                ].map(({ icon: Icon, href }) => (
+                  <a
+                    key={href}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex h-12 w-12 items-center justify-center border border-gray-300 text-gray-600 transition-colors hover:bg-orange-600 hover:text-white"
                   >
-                    <Icon className="h-5 w-5" aria-hidden />
-                  </button>
+                    <Icon className="h-4 w-4" />
+                  </a>
                 ))}
               </div>
             </div>

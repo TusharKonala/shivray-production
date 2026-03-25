@@ -75,7 +75,7 @@ export function Footer() {
               </span>
             </Link>
 
-            <p className="text-gray-400">The power behind political success.</p>
+            <p className="text-gray-400">Empowering Your Success Story</p>
           </div>
 
           {/* Col 2 */}

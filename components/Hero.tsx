@@ -28,7 +28,7 @@ export function Hero() {
               </span>
 
               <span className="inline-flex w-fit border border-gray-300/80 px-3 py-1 text-sm font-medium text-gray-700">
-                The Power Behind Political Success
+                Empowering Your Success Story
               </span>
             </div>
 
