@@ -1,9 +1,10 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { Menu, ArrowRight, X, Clapperboard } from "lucide-react";
+import { Menu, ArrowRight, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -29,18 +30,21 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-gray-200/80 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80">
-      <nav className="mx-auto w-full max-w-7xl flex items-center justify-between gap-4 px-4 sm:px-6 lg:px-8 py-4">
+      <nav className="mx-auto w-full max-w-7xl flex items-center justify-between gap-4 px-4 sm:px-6 lg:px-8 py-2">
         {/* Left: Logo */}
         <Link
           href="/"
           onClick={handleLogoClick}
-          className="flex shrink-0 items-center gap-2 text-gray-900 rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2"
+          className="flex shrink-0 items-center gap-0 text-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
           aria-label="Shivray Production home"
         >
-          <span className="flex h-9 w-9 sm:h-11 sm:w-11 items-center justify-center rounded-none bg-orange-600 text-xl font-bold text-white">
-            <Clapperboard
-              className="w-[18px] h-[18px] sm:w-[22px] sm:h-[22px]"
-              strokeWidth={2.5}
+          <span className="relative h-16 w-16 sm:h-18 sm:w-18 lg:h-24 lg:w-24">
+            <Image
+              src="/logo-without-bg.png"
+              alt="Shivray Production"
+              fill
+              className="object-contain"
+              priority
             />
           </span>
           <span className="text-lg sm:text-xl lg:text-2xl font-bold tracking-tight">

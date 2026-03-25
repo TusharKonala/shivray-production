@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Clapperboard } from "lucide-react";
 
 const serviceLinks = [
   { href: "#services", label: "Creative Content Creation" },
@@ -59,16 +59,18 @@ export function Footer() {
             <Link
               href="/"
               onClick={handleLogoClick}
-              className="inline-flex items-center gap-2 text-white rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900"
+              className="inline-flex items-center gap-3 text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-900"
               aria-label="Shivray Production home"
             >
-              <span className="flex h-9 w-9 sm:h-11 sm:w-11 items-center justify-center rounded-none bg-orange-600 text-white">
-                <Clapperboard
-                  className="w-[18px] h-[18px] sm:w-[22px] sm:h-[22px]"
-                  strokeWidth={2.5}
-                />
-              </span>
-              <span className="text-lg sm:text-xl lg:text-2xl font-bold tracking-tight">
+              <Image
+                src="/logo.jpeg"
+                alt="Shivray Production"
+                width={72}
+                height={72}
+                quality={100}
+                className="object-contain"
+              />
+              <span className="text-lg sm:text-xl lg:text-2xl font-semibold tracking-tight">
                 SHIVRAY PRODUCTION
               </span>
             </Link>
