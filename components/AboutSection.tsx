@@ -6,13 +6,15 @@ export function AboutSection() {
       <div className="mx-auto w-full max-w-7xl border-b border-gray-200/80 px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 items-center gap-8 py-8 sm:py-10 md:py-12 sm:gap-10 lg:grid-cols-2 lg:gap-12 xl:py-14">
           {/* Column 1: Image */}
-          <div className="relative w-full overflow-hidden h-[320px] sm:h-[380px] lg:h-[400px]">
+          {/* Photo is 1544×1793 — match aspect below lg; fixed height on lg+ for grid balance */}
+          <div className="relative w-full h-[370px] sm:h-[430px] md:h-[585px] lg:h-[min(420px,52vh)] lg:min-h-[360px] xl:h-[440px] overflow-hidden">
             <Image
-              src="/about-us.jpg"
-              alt="DigitalPro team and digital innovation"
+              src="/Shri_Ajit_Dada_Pawar_New.jpg"
+              alt="Shri Ajit Dada Pawar"
               fill
-              className="object-cover"
-              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover  object-[center_10%]"
+              sizes="(max-width: 1023px) 100vw, (max-width: 1280px) 50vw, 720px"
+              quality={100}
             />
           </div>
 
